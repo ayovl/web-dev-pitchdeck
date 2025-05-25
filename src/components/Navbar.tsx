@@ -40,9 +40,9 @@ const Navbar: React.FC = () => {
             onClick={(e) => {
               // This button is desktop-only already
               e.preventDefault();
-              window.location.href = 'mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry';
+              window.open('https://mail.google.com/mail/?view=cm&fs=1&to=arsalmaab@gmail.com&su=Website%20%26%20Branding%20Package%20Inquiry', '_blank');
             }}
-            className="btn btn-primary btn-sm">Get Started</a>
+            className="btn btn-primary btn-sm">Email Now</a>
         </div>
         
         {/* Mobile Menu Button */}
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Email Now
-            </a>
+            </a>``
           </div>
         </div>
       )}

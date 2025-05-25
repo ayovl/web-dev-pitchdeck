@@ -61,7 +61,7 @@ const About: React.FC = () => {
                 // Only handle click on desktop
                 if (window.innerWidth >= 768) {
                   e.preventDefault();
-                  window.location.href = 'mailto:arsalmaab@gmail.com?subject=Website%20Inquiry';
+                  window.open('https://mail.google.com/mail/?view=cm&fs=1&to=arsalmaab@gmail.com&su=Website%20Inquiry', '_blank');
                 }
                 // Mobile clicks will use the default href behavior
               }}

@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           ref={titleRef} 
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
         >
-          The Current Cash For Properties NYC website <span className="text-gradient">Isn't Converting</span><br />
+          Your Cash For Properties NYC website <span className="text-gradient">Isn't Converting</span><br />
           Well
         </h1>
         
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
               // Only handle click on desktop
               if (window.innerWidth >= 768) {
                 e.preventDefault();
-                window.location.href = 'mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry';
+                window.open('https://mail.google.com/mail/?view=cm&fs=1&to=arsalmaab@gmail.com&su=Website%20%26%20Branding%20Package%20Inquiry', '_blank');
               }
               // Mobile clicks will use the default href behavior
             }}
