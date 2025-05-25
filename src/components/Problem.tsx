@@ -19,8 +19,9 @@ const Problem: React.FC = () => {
   };
 
   return (
-    <section id="problem" className="px-3 py-20 relative animate-section mt-[-1px]">
+    <section id="problem" className="px-3 py-24 relative animate-section mt-[-1px]">
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent opacity-70"></div>
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black opacity-70"></div>
       <div className="ambient-light ambient-light-accent extended" style={{ zIndex: 0 }}></div>
       
       <div className="container mx-auto px-4">

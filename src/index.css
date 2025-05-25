@@ -163,3 +163,92 @@ section::after {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
   z-index: -1;
 }
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0) rotate(-15deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pop-out {
+  0% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-out-up {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Animation classes for the Email Now button exit animations */
+.animate-pop-out {
+  animation: pop-out 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+}
+
+.animate-slide-out {
+  animation: slide-out-up 0.3s ease-in forwards;
+}
+
+/* Animation classes for the Email Now button */
+.animate-pop-in {
+  animation: pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in-up 0.4s ease-out forwards;
+}
+
+/* Animation for mobile menu fade-down */
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+}
+
+.animate-fade-down {
+  animation: fade-down 0.3s ease-out forwards;
+}
+
+.section-content {
+  position: relative;
+  z-index: 10;
+}

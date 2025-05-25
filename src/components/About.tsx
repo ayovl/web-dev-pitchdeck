@@ -30,9 +30,9 @@ const About: React.FC = () => {
       }
     );
   }, []);
-
   return (
-    <section id="about" className="py-24 relative" ref={sectionRef}>
+    <section id="about" className="py-24 relative mt-[-1px]" ref={sectionRef}>
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent opacity-70"></div>
       <div className="ambient-light ambient-light-primary" style={{ opacity: 0.1, top: '30%', left: '20%' }}></div>
       
       <div className="container mx-auto px-4">
