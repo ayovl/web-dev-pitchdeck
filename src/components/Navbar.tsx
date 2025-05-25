@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black bg-opacity-80 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-black bg-opacity-80 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-center items-center relative">
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
         </div>
         
         {/* Mobile Menu Button */}
-        <div className="md:hidden absolute right-4">
+        <div className="md:hidden absolute right-4 py-1">
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
             className="text-white p-2"

@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           ref={titleRef} 
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
         >
-          Your Cash For Properties NYC website <span className="text-gradient">Isn't Converting</span><br />
+          Your Current Website <span className="text-gradient">Isn't Converting</span><br />
           Well
         </h1>
         
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto"
         >
-      Your New and Improved Website Is Ready.
+      A new and improved cashforpropertiesnyc.com is ready for you.
         </p>
         
         <div ref={ctaRef} className="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0">

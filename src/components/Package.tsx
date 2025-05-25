@@ -94,20 +94,37 @@ const Package: React.FC = () => {
               {packageFeatures.map((feature) => (
                 <div 
                   key={feature.id}
-                  className="feature-item animate-element bg-base-200 bg-opacity-60 backdrop-blur-sm p-5 rounded-xl shadow border border-gray-800 transition-all"
+                  className={`feature-item animate-element p-5 rounded-xl shadow transition-all ${
+                    feature.id === 'f6' 
+                      ? 'bg-gradient-to-br from-primary-600/30 to-secondary-600/30 border-2 border-primary-400/40 relative overflow-hidden transform hover:scale-[1.02]'
+                      : 'bg-base-200 bg-opacity-60 backdrop-blur-sm border border-gray-800'
+                  }`}
                 >
+                  {feature.id === 'f6' && (
+                    <div className="absolute top-0 right-0 bg-primary-500 text-white px-3 py-1 text-sm font-bold transform rotate-0 translate-x-0 translate-y-0 rounded-bl-lg shadow-lg">
+                      FREE
+                    </div>
+                  )}
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary-900 bg-opacity-50 flex items-center justify-center mr-3" style={{ aspectRatio: '1/1', minWidth: '2.5rem' }}>
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 ${
+                      feature.id === 'f6'
+                        ? 'bg-primary-500 text-white'
+                        : 'bg-primary-900 bg-opacity-50'
+                    }`} style={{ aspectRatio: '1/1', minWidth: '2.5rem' }}>
                       {renderIcon(feature.icon)}
                     </div>
-                    <h3 className="text-lg font-bold">{feature.title}</h3>
+                    <h3 className={`text-lg font-bold ${feature.id === 'f6' ? 'text-primary-300' : ''}`}>
+                      {feature.title}
+                    </h3>
                   </div>
                   
                   <ul className="space-y-2 text-gray-300 text-sm">
                     {feature.features.map((item, idx) => (
                       <li key={idx} className="flex items-start">
-                        <Check className="w-4 h-4 text-success-400 mr-2 flex-shrink-0 mt-1" />
-                        <span>{item}</span>
+                        <Check className={`w-4 h-4 mr-2 flex-shrink-0 mt-1 ${
+                          feature.id === 'f6' ? 'text-primary-300' : 'text-success-400'
+                        }`} />
+                        <span>{feature.id === 'f6' && idx === 0 ? <strong className="text-primary-200">{item}</strong> : item}</span>
                       </li>
                     ))}
                   </ul>

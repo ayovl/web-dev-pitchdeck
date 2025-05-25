@@ -1,7 +1,7 @@
 import React from 'react';
 import { useScrollAnimations } from '../hooks/useAnimation';
 import { problemPoints } from '../data/data';
-import { Snail, Frown, MousePointerClick, Ban, DoorClosed } from 'lucide-react';
+import { Snail, Frown, MousePointerClick, Ban, DoorClosed, ShieldAlert } from 'lucide-react';
 
 const Problem: React.FC = () => {
   useScrollAnimations();
@@ -13,6 +13,7 @@ const Problem: React.FC = () => {
       case 'MousePointerClick': return <MousePointerClick className="w-10 h-10 text-error-400" />;
       case 'Ban': return <Ban className="w-10 h-10 text-error-400" />;
       case 'DoorClosed': return <DoorClosed className="w-10 h-10 text-error-400" />;
+      case 'ShieldAlert': return <ShieldAlert className="w-10 h-10 text-error-400" />;
       default: return null;
     }
   };
