@@ -20,43 +20,78 @@ h1, h2, h3, h4, h5, h6 {
 .ambient-light {
   position: absolute;
   border-radius: 50%;
-  filter: blur(150px);
-  opacity: 0.25;
+  filter: blur(120px);
+  opacity: 0.3; /* Increased opacity for mobile */
   z-index: 0;
   transition: all 0.8s ease;
 }
 
 .ambient-light.extended {
-  filter: blur(180px);
-  height: 70vh;
+  filter: blur(150px);
+  height: 60vh; /* Adjusted for better mobile visibility */
 }
 
 .ambient-light-primary {
   background: #0ea5e9;
-  width: 55vw;
-  height: 55vw;
-  top: 5vh;
-  left: -15vw;
+  width: 80vw; /* Larger on mobile */
+  height: 80vw;
+  top: 10%; /* Centered better for mobile */
+  left: -20%; /* More visible on mobile */
   animation: float 20s ease-in-out infinite;
 }
 
 .ambient-light-secondary {
   background: #14b8a6;
-  width: 40vw;
-  height: 40vw;
-  top: 50vh;
-  right: -10vw;
+  width: 70vw; /* Larger on mobile */
+  height: 70vw;
+  top: 50%;
+  right: -20%; /* More visible on mobile */
   animation: float 15s ease-in-out infinite reverse;
 }
 
 .ambient-light-accent {
   background: #f97316;
-  width: 35vw;
-  height: 35vw;
-  bottom: 10vh;
-  left: 20vw;
+  width: 60vw; /* Larger on mobile */
+  height: 60vw;
+  bottom: 10%;
+  left: 10%; /* More centered on mobile */
   animation: float 25s ease-in-out infinite 5s;
-  opacity: 0.15;
+  opacity: 0.2; /* Slightly increased opacity */
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+  .ambient-light {
+    filter: blur(150px);
+    opacity: 0.25;
+  }
+  
+  .ambient-light.extended {
+    filter: blur(180px);
+    height: 70vh;
+  }
+  
+  .ambient-light-primary {
+    width: 55vw;
+    height: 55vw;
+    top: 5vh;
+    left: -15vw;
+  }
+  
+  .ambient-light-secondary {
+    width: 40vw;
+    height: 40vw;
+    top: 50vh;
+    right: -10vw;
+  }
+  
+  .ambient-light-accent {
+    width: 35vw;
+    height: 35vw;
+    bottom: 10vh;
+    left: 20vw;
+    opacity: 0.15;
+  }
 }
 
 .text-gradient {
@@ -84,13 +119,31 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0) translateX(0);
   }
   25% {
-    transform: translateY(-5vh) translateX(5vw);
+    transform: translateY(-7vh) translateX(7vw);
   }
   50% {
-    transform: translateY(0) translateX(10vw);
+    transform: translateY(0) translateX(12vw);
   }
   75% {
-    transform: translateY(5vh) translateX(5vw);
+    transform: translateY(7vh) translateX(7vw);
+  }
+}
+
+/* Smaller animation for desktop */
+@media (min-width: 768px) {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(-5vh) translateX(5vw);
+    }
+    50% {
+      transform: translateY(0) translateX(10vw);
+    }
+    75% {
+      transform: translateY(5vh) translateX(5vw);
+    }
   }
 }
 

@@ -46,8 +46,8 @@ const Hero: React.FC = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-10 py-20 md:py-0">
-      <div className="ambient-light ambient-light-primary extended"></div>
-      <div className="ambient-light ambient-light-secondary extended"></div>
+      <div className="ambient-light ambient-light-primary extended" style={{ zIndex: 0 }}></div>
+      <div className="ambient-light ambient-light-secondary extended" style={{ zIndex: 0 }}></div>
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black"></div>
       
       <div className="section-content text-center max-w-4xl mx-auto">

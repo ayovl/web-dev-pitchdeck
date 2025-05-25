@@ -35,17 +35,17 @@ export const problemPoints: ProblemPoint[] = [
 
 export const benefits: Benefit[] = [
   {
+    id: 'b1',
+    title: 'Attract More Clients',
+    description: 'After a website redesign, Xerox saw a 43% conversion rate for nurtured leads and a 20% sales increase. Turn visitors into loyal clients with strategically designed user journeys and clear calls-to-action.',
+    icon: 'TrendingUp'
+  },
+  {
     id: 'b2',
     title: 'Appear Trustworthy',
     // description: 'Build instant credibility with a polished online presence that conveys professionalism and reliability.',
     description: "75% of users judge a company's credibility based on website design. Build instant credibility with a polished online presence that conveys professionalism and reliability.",
     icon: 'Shield'
-  },
-  {
-    id: 'b1',
-    title: 'Attract More Clients',
-    description: 'After a website redesign, Xerox saw a 43% conversion rate for nurtured leads and a 20% sales increase. Turn visitors into loyal clients with strategically designed user journeys and clear calls-to-action.',
-    icon: 'TrendingUp'
   },
   {
     id: 'b3',
@@ -119,13 +119,12 @@ export const packageFeatures: PackageFeature[] = [
     id: 'f6',
     title: 'Free Branding Refresh',
     features: [
-      'Comprehensive brand identity development',
+      'Brand identity development',
       'Detailed brand guidelines',
-      'New bespoke logo design',
+      'New logo design',
       'Social media profile assets (banners, profile pictures)',
       'Professional letterhead design',
       'Custom business card design',
-      'Email signature'
     ],
     icon: 'Paintbrush'
   }

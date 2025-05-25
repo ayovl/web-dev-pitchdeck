@@ -5,6 +5,22 @@ import { TrendingUp, Shield, Briefcase, Palette } from 'lucide-react';
 
 const Solution: React.FC = () => {
   useScrollAnimations();
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Check on mount
+    checkMobile();
+    
+    // Add event listener for resize
+    window.addEventListener('resize', checkMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const renderIcon = (iconName: string) => {
     switch (iconName) {
@@ -19,7 +35,13 @@ const Solution: React.FC = () => {
   return (
     <section id="solution" className="px-4 py-20 relative animate-section mt-[-1px]">
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent opacity-70"></div>
-      <div className="ambient-light ambient-light-primary" style={{ opacity: 0.2, top: '40%', left: '60%', filter: 'blur(160px)' }}></div>
+      <div className="ambient-light ambient-light-primary" style={{ 
+        opacity: 0.25, 
+        top: isMobile ? '30%' : '40%', 
+        left: isMobile ? '30%' : '60%', 
+        filter: 'blur(160px)',
+        zIndex: 0
+      }}></div>
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-element">
