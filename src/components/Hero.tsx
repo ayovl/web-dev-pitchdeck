@@ -63,17 +63,23 @@ const Hero: React.FC = () => {
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto"
         >
-      Your New and Improved Website Is Readylls.
+      Your New and Improved Website Is Ready.
         </p>
         
         <div ref={ctaRef} className="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0">
           <a 
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=arsalmaab@gmail.com&su=Website%20%26%20Branding%20Package%20Inquiry" 
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry" 
+            onClick={(e) => {
+              // Only handle click on desktop
+              if (window.innerWidth >= 768) {
+                e.preventDefault();
+                window.location.href = 'mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry';
+              }
+              // Mobile clicks will use the default href behavior
+            }}
             className="btn btn-primary btn-lg font-medium text-lg px-8 rounded-full shadow-lg sm:mr-4 w-full sm:w-auto"
           >
-        Emai Merted
+        Email Now
           </a>
           <a 
             href="#problem" 
@@ -83,8 +89,8 @@ const Hero: React.FC = () => {
           </a>
         </div>
         
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden md:block float-element">
-          <ArrowDown className="animate-bounce w-8 h-8 text-white opacity-70" />
+        <div className="mt-16 hidden md:block float-element">
+          <ArrowDown className="animate-bounce w-8 h-8 text-white opacity-70 mx-auto" />
         </div>
       </div>
     </section>

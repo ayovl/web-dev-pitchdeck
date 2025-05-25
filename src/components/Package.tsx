@@ -142,12 +142,18 @@ const Package: React.FC = () => {
             {/* CTA Button */}
             <div className="text-center">
               <a 
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=arsalmaab@gmail.com&su=Website%20%26%20Branding%20Package%20Inquiry" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry" 
+                onClick={(e) => {
+                  // Only handle click on desktop
+                  if (window.innerWidth >= 768) {
+                    e.preventDefault();
+                    window.location.href = 'mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry';
+                  }
+                  // Mobile clicks will use the default href behavior
+                }}
                 className="btn btn-primary btn-lg w-full md:w-auto md:px-12 text-lg font-medium"
               >
-                Email ME
+                Email Now
               </a>
             </div>
           </div>

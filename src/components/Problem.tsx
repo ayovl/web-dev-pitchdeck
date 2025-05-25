@@ -18,7 +18,7 @@ const Problem: React.FC = () => {
   };
 
   return (
-    <section id="problem" className="px-2 py-20 relative animate-section mt-[-1px]">
+    <section id="problem" className="px-3 py-20 relative animate-section mt-[-1px]">
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent opacity-70"></div>
       <div className="ambient-light ambient-light-accent extended"></div>
       
@@ -26,7 +26,7 @@ const Problem: React.FC = () => {
         <div className="text-center mb-12 animate-element">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">The Problem</h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            current cashforpropertiesnyc.com design has these issues.
+            Your current cashforpropertiesnyc.com design has these issues.
           </p>
         </div>
         

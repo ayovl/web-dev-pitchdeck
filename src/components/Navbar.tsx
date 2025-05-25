@@ -35,7 +35,14 @@ const Navbar: React.FC = () => {
           <a href="#solution" className="text-white hover:text-primary-300 transition-colors">Solution</a>
           <a href="#package" className="text-white hover:text-primary-300 transition-colors">Pricing</a>
           <a href="#about" className="text-white hover:text-primary-300 transition-colors">Contact</a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arsalmaab@gmail.com&su=Website%20%26%20Branding%20Package%20Inquiry" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">Get Started</a>
+          <a 
+            href="mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry"
+            onClick={(e) => {
+              // This button is desktop-only already
+              e.preventDefault();
+              window.location.href = 'mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry';
+            }}
+            className="btn btn-primary btn-sm">Get Started</a>
         </div>
         
         {/* Mobile Menu Button */}
@@ -82,13 +89,11 @@ const Navbar: React.FC = () => {
               Contact
             </a>
             <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=arsalmaab@gmail.com&su=Website%20%26%20Branding%20Package%20Inquiry" 
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:arsalmaab@gmail.com?subject=Website%20%26%20Branding%20Package%20Inquiry" 
               className="btn btn-primary w-full"
               onClick={() => setIsMenuOpen(false)}
             >
-              Email Me
+              Email Now
             </a>
           </div>
         </div>

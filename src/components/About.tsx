@@ -55,12 +55,16 @@ const About: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Email Me</h3>
             <p className="text-gray-300 mb-6">
               For inquiries, questions, or to get started with your project, email me directly.
-            </p>
-            
-            <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=arsalmaab@gmail.com&su=Website%20Inquiry" 
-              target="_blank"
-              rel="noopener noreferrer"
+            </p>              <a 
+              href="mailto:arsalmaab@gmail.com?subject=Website%20Inquiry" 
+              onClick={(e) => {
+                // Only handle click on desktop
+                if (window.innerWidth >= 768) {
+                  e.preventDefault();
+                  window.location.href = 'mailto:arsalmaab@gmail.com?subject=Website%20Inquiry';
+                }
+                // Mobile clicks will use the default href behavior
+              }}
               className="text-xl font-medium text-primary-400 hover:text-primary-300 transition-colors flex items-center justify-center"
             >
               <Mail className="w-5 h-5 mr-2" />
