@@ -118,7 +118,7 @@ const Package: React.FC = () => {
              {/* Package Header with Title and Price */}
             <div className="flex flex-col md:flex-row justify-between items-center mb-8 border-b border-gray-700 pb-6">
               <div>
-                <h3 className="text-3xl font-bold mb-2">Website Package</h3>
+                {/* <h3 className="text-3xl font-bold mb-2">Website Package</h3> */}
                 <p className="text-accent-400 text-lg font-medium">Complete Solution</p>
               </div>
               
